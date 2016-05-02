@@ -1,0 +1,98 @@
+/**
+ * Burnthouse Theme
+ * https://taylorlovett.com
+ *
+ * Copyright (c) 2016 Taylor Lovett
+ * Licensed under the GPLv2+ license.
+ */
+@import url(https://fonts.googleapis.com/css?family=Cinzel|);
+body {
+  background-color: #6699cc;
+  color: #000;
+  font-family: Helvetica, sans-serif; }
+
+.wrap {
+  width: 100%;
+  text-align: center; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: normal; }
+
+h1 span {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+a {
+  color: #000; }
+
+a:hover {
+  color: #000; }
+
+.content {
+  background-color: #fff;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 700px;
+  margin: 0 auto;
+  text-align: left; }
+
+/**
+ * Splash
+ */
+.splash-img {
+  max-width: 650px; }
+
+.main-menu li a {
+  text-decoration: none; }
+
+.main-menu ul {
+  list-style-type: none;
+  padding: 0; }
+
+.main-menu li {
+  display: block;
+  padding: .5em; }
+
+.main-menu li.current_page_item a {
+  color: #993300; }
+
+@media screen and (min-width: 700px) {
+  .main-menu li {
+    display: inline-block;
+    margin-right: 1em; }
+  .main-menu li:last-child {
+    margin-right: 0; } }
+
+/**
+ * Gallery
+ */
+.ml-slider {
+  margin: 0 auto; }
+
+.gallery .gallery-item {
+  display: none; }
+
+.gallery br {
+  display: none; }
+
+.gallery .gallery-item:first-child {
+  display: block; }
+
+.gallery .gallery-item:first-child img {
+  width: 700px; }
+
+.jp-carousel-info {
+  display: none; }
+
+/**
+ * Map
+ */
+#map {
+  margin: 0 auto;
+  width: 700px;
+  height: 500px; }
