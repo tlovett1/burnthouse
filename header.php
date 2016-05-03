@@ -10,7 +10,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Burnt House<?php wp_title( ' -' ); ?></title>
+	<title>Welcome to Burnt House<?php wp_title( ' -' ); ?></title>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
