@@ -12,6 +12,21 @@
 $textColor: #000;
 $linkColor: #000;
 
+$base-line-height: 24px;
+$white: rgb(255,255,255);
+$off-white: rgba($white, 0.2);
+$spin-duration: 1s;
+$pulse-duration: 750ms;
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 body {
 	background-color: #6699cc;
 	color: $textColor;
@@ -47,12 +62,31 @@ a:hover {
 }
 
 .content {
+	margin: 0 auto;
+}
+
+.content .text {
 	background-color: #fff;
 	padding: 20px 30px;
 	box-sizing: border-box;
 	width: 100%;
-	margin: 0 auto;
 	text-align: left;
+}
+
+.content.loading {
+	background-color: inherit;
+	text-align: center;
+}
+
+.content.loading:before {
+	content: '';
+	display: inline-block;
+	border-radius: 50%;
+	width: $base-line-height;
+	height: $base-line-height;
+	border: .25rem solid $off-white;
+	border-top-color: $white;
+	animation: spin $spin-duration infinite linear;
 }
 
 @media screen and (min-width: 700px) {
@@ -81,10 +115,6 @@ a:hover {
 .main-menu li {
 	display: block;
 	padding: .5em;
-}
-
-.main-menu li.current_page_item a {
-	color: #993300;
 }
 
 @media screen and (min-width: 700px) {
@@ -157,6 +187,16 @@ a:hover {
 	.tour {
 		width: 700px;
 	}
+}
+
+/**
+ * Audio
+ */
+
+audio {
+	position: fixed;
+	bottom: 8px;
+	right: 8px;
 }
 
 

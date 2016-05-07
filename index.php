@@ -16,10 +16,13 @@ get_header(); ?>
 			<?php wp_nav_menu( array( 'menu' => 'Project Nav' ) ); ?>
 		</section>
 
-		<section class="content">
-			<?php the_content(); ?>
+		<section class="content loading">
 		</section>
 	<?php endwhile; ?>
 <?php endif; ?>
+
+<audio controls autoplay>
+ 	<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/mp3s/bermuda-moon.mp3" type="audio/mpeg">
+</audio>
 
 <?php get_footer();
