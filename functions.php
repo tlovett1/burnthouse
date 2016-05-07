@@ -14,7 +14,7 @@
  */
 
 // Useful global constants
-define( 'BH_VERSION',      '0.1.0' );
+define( 'BH_VERSION',      '0.1.1' );
 define( 'BH_URL',          get_stylesheet_directory_uri() );
 define( 'BH_TEMPLATE_URL', get_template_directory_uri() );
 define( 'BH_PATH',         get_template_directory() . '/' );
