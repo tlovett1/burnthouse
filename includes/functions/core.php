@@ -24,7 +24,7 @@ function setup() {
 	add_action( 'wp_ajax_bh_switch_to_page', $n( 'switch_to_page' ) );
 	add_action( 'wp_ajax_nopriv_bh_switch_to_page', $n( 'switch_to_page' ) );
 	add_filter( 'template_include', $n( 'override_template' ) );
-	add_action('init', $n( 'api_add_rewrite' ) );
+	add_action( 'init', $n( 'api_add_rewrite' ) );
 	add_action( 'parse_request', $n( 'api_rewrite' ) );
 }
 
@@ -80,9 +80,6 @@ function scripts( $debug = false ) {
 	);
 
 	wp_localize_script( 'bh-main', 'bh', array( 'ajaxurl' => esc_url( home_url( 'ajax' ) ) ) );
-
-	$carousel = new \Jetpack_Carousel;
-	$carousel->enqueue_assets( '' );
 }
 
 /**

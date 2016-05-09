@@ -5,5 +5,4 @@
 ?>
 
 <?php the_content(); ?>
-
-<p>Click the image to open the gallery.</p>
+<p><a href="javascript:void(0)" id="toggleAutoPlayBtn">Pause Slideshow</a></p>

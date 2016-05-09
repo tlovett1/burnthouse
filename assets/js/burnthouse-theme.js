@@ -7,6 +7,7 @@
 	var $content = $( '.content' );
 	var $menu = $( '.main-menu' );
 	var $body = $( 'body' );
+	var autoStart = true;
 
 	function linkClick(event) {
 		event.preventDefault();
@@ -19,9 +20,18 @@
 		return false;
 	}
 
-	$menu.on( 'click', 'a', linkClick);
-
+	$menu.on( 'click', 'a', linkClick );
 	$body.on( 'click', '.ajax-link', linkClick );
+	$body.on( 'click', '#toggleAutoPlayBtn', function() {
+		if(autoStart) {
+			$(this).html('Play Slideshow');
+		} else {
+			$(this).html('Pause Slideshow');
+		}
+		autoStart = !autoStart;
+
+		$('.royalSlider').royalSlider('toggleAutoPlay');
+	});
 
 	function switchToPage(path) {
 		path = path || window.location.pathname;
@@ -38,6 +48,39 @@
 			}
 		}).done(function(response) {
 			$content.html(response);
+			$('.royalSlider').royalSlider({
+				template:'default',
+				image_generation:{
+					lazyLoading:!0,
+					imageWidth:'',
+					imageHeight:'',
+					thumbImageWidth:96,
+					thumbImageHeight:72
+				},
+				thumbs:{
+					paddingBottom:4,
+					thumbWidth:96,
+					thumbHeight:72,
+					appendSpan:!0
+				},
+				autoPlay:{
+					enabled:1,
+					stopAtAction: 0,
+					pauseOnHover:0
+				},
+				fullscreen:{enabled:0,nativeFS:0},
+				video:{forceMaxVideoCoverResolution:'standard'},
+				width:'100%',
+				height:500,
+				autoScaleSlider:!0,
+				autoScaleSliderWidth:960,
+				autoScaleSliderHeight:850,
+				controlNavigation:'thumbnails',
+				arrowsNavHideOnTouch:!0,
+				globalCaptionInside:!0,
+				keyboardNavEnabled:!0,
+				fadeinLoadedSlide:!1
+			});
 			$content.removeClass( 'loading' );
 		});
 	}
