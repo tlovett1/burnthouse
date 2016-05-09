@@ -66,7 +66,8 @@
 				autoPlay:{
 					enabled:1,
 					stopAtAction: 0,
-					pauseOnHover:0
+					pauseOnHover:0,
+					delay: 6000
 				},
 				fullscreen:{enabled:0,nativeFS:0},
 				video:{forceMaxVideoCoverResolution:'standard'},
@@ -83,7 +84,7 @@
 			});
 
 			wp.ccf.setupDOM();
-			
+
 			$content.removeClass( 'loading' );
 		});
 	}

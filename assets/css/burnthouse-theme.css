@@ -161,3 +161,11 @@ audio {
 .loading-img {
   width: 15px;
   height: 15px; }
+
+#toggleAutoPlayBtn {
+  background-color: #fff;
+  padding: 8px 12px;
+  border-radius: 9px;
+  margin-top: 20px;
+  display: inline-block;
+  cursor: pointer; }
