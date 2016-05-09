@@ -151,7 +151,7 @@ function api_rewrite( $wp ) {
 
 		global $post;
 
-		$post = get_page_by_path( $path );
+		$post = get_page_by_path( str_replace( '/new', '', $path ) );
 
 		setup_postdata( $post );
 
