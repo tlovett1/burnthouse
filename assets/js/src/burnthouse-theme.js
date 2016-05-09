@@ -86,6 +86,9 @@
 				keyboardNavEnabled:!0,
 				fadeinLoadedSlide:!1
 			});
+
+			wp.ccf.setupDOM();
+			
 			$content.removeClass( 'loading' );
 		});
 	}
