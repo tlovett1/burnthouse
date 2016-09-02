@@ -29,7 +29,7 @@ function setup() {
 }
 
 function override_template( $template ) {
-	if ( is_home() || is_404() || is_front_page() ) {
+	if ( is_home() || is_404() || is_front_page() || is_page( 'summary' ) ) {
 		return $template;
 	}
 
